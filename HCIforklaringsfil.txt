@@ -1,0 +1,26 @@
+HCI for gruppe 12, Subway
+
+1.4.1 Use of Color
+Vi har brukt fargene som Subway er kjent for nemlig grønn og gul, og vi har brukt dem på en måte som gjør det enkelt for brukeren å lese teksten
+
+1.4.3 Contrast (Minimum)
+Vi har forskjellige størrelser på titler for å ha variasjon i nettsidem men samtidig sørget for at det skal være lesbart for brukeren og at det blir enkelt for brukeren å lese teksten i nettsiden.
+
+1.4.5 Images of Text
+Vi har hatt satt tekst sammen med bilde i noen av sidene for å gjøre det enklere for brukeren å forstå hva teksten handler om.
+
+1.4.6 Contrast (Enhanced)
+Headeren på sidene er stor og lesbar for brukeren og det blir enkelt å lese titler og logo som står i header elementet på hver side. 
+
+
+1.4.9 Images of Text (No Exception)
+Vi har gjort det enkelt for bruker å lese teksten og spesielt for logoen i hovedsiden og det diverse titlene til det forskjellige nettside titlene som gjør det enklet for bruker å lese vite hva hvilke side inneholder
+
+
+1.4.10 Reflow
+Vi har klart å fikse reflow på både laptop og på mobil skjerm størrelser
+
+1.4.13 Content on Hover or Focus
+Vi har brukt hover en del ganger rundt i nettsiden spesielt i meny/ produkt seksjonen av nettsiden hvor det er mulig å bruke hover til å se liste over alergier til hvert produkt som står i siden.
+
+

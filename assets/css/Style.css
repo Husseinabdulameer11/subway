@@ -1,0 +1,517 @@
+/*start of Website General Style layout*/
+*,*::before,*::after{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*css variables*/
+:root{
+--color-green: rgba(1,169,94,0.5);                        
+--color-yellow: rgba(251,201,74,0.5);                     
+--color-green-Dark: rgb(1,169,94);                        
+--color-yellow-Dark: rgb(251,201,74);                     
+--background-size: cover;                                 
+--background-position: center;                            
+}
+/*website components*/                                    
+/*image with faded text*/   
+.faded_image_container {                                                  
+  position: relative;
+  width: 100%;
+  left: 10%;
+  margin: 13px;
+  float: left;
+  height: 161px;
+  padding: 10px;
+}
+.faded_image {                                           /*style for bildet som tilhører bilde komponenten*/
+  display: block;
+  width: 100%;
+  height: 149px;
+}
+.faded_image_text_overlay {                             /*det vi ser etter at en bruker har musa over bildet(hover effect)*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: var(--color-green-Dark);
+}
+.faded_image_container:hover .faded_image_text_overlay {    /*vise overlay laget når vi bruker hover effect*/
+  opacity: 1;
+}
+.faded_image_text {                                         /*style for teksten som er inne i overlay laget til komponenten*/
+  color: var(--color-yellow-Dark);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*social media list*/
+.social_media-list-item{                                   /*style fo listen over sosiale medier til firmaet som ligger i footer seksjon av siden*/
+    float: left;
+    margin: 10px;
+    list-style: none;
+}
+.social_media-list-item>img{                               /*style for sosiale medier ikonene til sosiale medier listen*/
+    width: 30px;
+}
+.social_media-list_link:focus{
+color: var(--color-green-Dark) !important;
+}
+/*end of styles for social media list*/
+/*table design*/
+/*table{                                                    
+    border-collapse: collapse;
+    margin: 15px 414px;
+    font-size: 0.9em;
+    min-width: 360px;
+    border-radius: 5px 5px 0 0;
+    border: 5px solid var(--color-green-Dark);
+}
+table thead tr{
+background-color: var(--color-green-Dark);
+color: var(--color-yellow-Dark);
+text-align: left;
+font-weight: bold;
+}
+table th,table td{
+    padding: 4px 9px;
+}
+table tbody>tr{
+    border-bottom: 2px solid var(--color-yellow-Dark);
+}
+.table_section{
+    display: table;
+    }
+/*end of styles for table*/
+/*
+grid_containers
+*/  
+.grid_container_small{                                   /*her har vi styler til forskjellige typer grids vi har brukt i siden*/
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+margin: 0px 70px;
+}
+.grid_container_small_img{
+    height: 138px;
+    width: 138px;
+   margin-left: 50px;
+}
+.phone_gallery{                                      /*tilpasse grid for telefon ved å gjøre elementene over hverandre på mobil enheter*/
+display: none;
+grid-template-columns: repeat(3, 1fr);
+margin: 10px;
+
+}
+.meny_grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.gallery{
+    margin:10px 10px 0 0;width: 250px;position: relative;border: 10px solid var(--color-green-Dark);}
+/*custome font-styles*/
+h3.Paragraph_title_small {                            /*her har vi styler for det forskjellige skrift størrelsene og fonten på vår side*/
+    color: var(--color-green-Dark);
+    text-align: center;
+    padding: 20px;
+    font-size: 1.3em;
+}
+h3.Paragraph_title_extra-small {
+    color: var(--color-green-Dark);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+h3.Paragraph_title_medium{
+    font-size: 1.7em;
+      color: var(--color-green-Dark);
+    text-align: center;
+    padding: 20px;
+}
+p.Paragraph_text_small {
+    inline-size: 246px;
+    margin-left: 50px;
+}
+.heading-title{
+    text-align: center;
+    position: relative;
+     font-size: 5em;
+     top: 30%;
+}
+
+.heading-title_logo>span:first-child{
+    color: white;
+}
+.heading-title_logo>span:last-child{
+    color: var(--color-yellow-Dark);
+}
+.heading-title>span:first-child{
+    position: relative;
+    animation: leftanimation 5s;
+    transition: all 0.5s;
+     font-family:SubWayFont;
+}
+.heading-title>p>span:first-child{
+font-family: SubWayFont;
+ position: relative;
+ font-size: 0.5em;
+  animation: rightanimation 5s;
+  font-size: 40%;
+  color:white;
+ text-shadow: 2px 1px 1px yellow;
+font-size: 0.6em;
+}
+.heading-title>p>span:last-child{
+font-family: SubWayFont;
+ position: relative;
+ font-size: 0.5em;
+  animation: rightanimation 5s;
+  font-size: 40%;
+  color: var(--color-yellow-Dark);
+ text-shadow: 2px 1px 1px yellow;
+font-size: 0.6em;
+}
+.heading-title>span:last-child{
+    font-family: SubWayFont;
+    position: relative;
+    animation: rightanimation 5s;
+    font-size: 55%;
+    color: var(--color-yellow-Dark);
+    text-shadow: 2px 1px 1px yellow;
+}
+
+.TitleLogo{
+    font-size: 2.5rem;
+    font-family: SubWayFont;
+    padding: 2%;
+    text-align: center;
+}
+.TitleLogo>span:first-child{
+    color: var(--color-yellow-Dark);
+}
+.TitleLogo>span:last-child{
+    color: var(--color-green-Dark);
+}
+/*Header*/
+/*header general styling*/
+/*header homepage styles*/                                              /*her har vi style for å endre bakgrunns bilde i header for hver side*/
+header.Home_Header{
+   background:url('../images/bkg.jpg');
+}
+header.Aboutus_Header{
+   background:url('../images/background.jpg');
+}
+header.gallery_Header{
+   background:url('../images/background_image3.png');
+}
+header.menu_Header{
+   background:url('../images/subway-wrap.jpg');
+}
+header.header{                                                      /*gennerelle styler for headerene i våre sider*/
+height: 100vh;
+background-size: var(--background-size);
+background-position: var(--background-position);
+}
+/* end of header section styles */
+/*Sections*/
+/* defining the height of sections used in the website */
+.smallSection{                                                      /*styler for det forskjellige seksjonene vi har i våre sider*/
+    height: 60vh;
+    display: block;
+}
+.BigSection{
+    height: 80vh;
+}
+.Home_about_section{
+    height: 65vh;
+}
+
+.grid_section{
+    display: table;
+    height: 80vh;
+}
+.footer{                                                            /*styler for footer elementet på vår nettside*/
+    height: 40vh;
+    background:linear-gradient(45deg,black,grey) ;
+}
+.footer_text{                                                       /*style teksten i footer elementet*/
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*end of section styles*/
+
+/*styles for form element*/
+input:not([type="submit"]):valid {
+  border-color: #2ecc71;
+}
+
+input:not([type="submit"]):hover + .input-requirements,
+input:not([type="submit"]):focus + .input-requirements,
+input:not([type="submit"]):active + .input-requirements{
+  max-height: 1000px; /* any large number (bigger then the .input-requirements list) */
+  transition: max-height 1s ease-in;
+}
+.input-requirements {
+  font-size: 1.3rem;
+  font-style: italic;
+  text-align: left;
+  list-style: disc;
+  list-style-position: inside;
+  max-width: 400px;
+  margin: 10px auto;
+  color: rgb(150,150,150);
+}
+.input-requirements span.invalid {
+    color: #e74c3c;
+}
+.input-requirements  span.valid {
+    color: #2ecc71;
+}
+.input-requirements  span.valid:after {
+    display: inline-block;
+    padding-left: 10px;
+    content: "\2713";
+}
+.registration>input:active,.registration>input:visited,.registration>input:focus{
+    color: black !important;
+}
+
+.input-requirements>span{
+  display: block;
+  font-size: 70%;
+
+}
+
+.input-requirements span:before{
+  content: "*";
+  display: inline-block;
+}
+
+
+
+
+
+
+/*Animations*/
+@keyframes leftanimation{                                           /* her har vi animasjoner som vi bruker å store titler i header delene av nettsiden */
+    0%{
+        left: -30%;
+        opacity: 0;
+    }
+    50%{
+        left: 10%;
+        opacity: 0.7;
+    }
+    100%{
+        left: 0%;
+        opacity: 1;
+    }
+}
+@keyframes rightanimation{  
+    0%{
+        left: 30%;
+        opacity: 0;
+    }
+    50%{
+        left: 10%;
+        opacity: 0.7;
+    }
+    100%{
+        left: 0%;
+        opacity: 1;
+    }
+}
+
+/*end of animations part*/
+/*fonts*/
+@font-face {                                                      /*vi har brukt en font for å gjøre logoen vår lik original logoen*/
+  font-family: "SubWayFont";
+  src:  url('../fonts/Subway.ttf')  format('truetype'),  url('../fonts/Subway.ttf')  format('truetype');
+}
+/*end of animations part*/
+/*navigation*/
+/* pc styles */
+
+
+.navigation>nav a{                                             /*css koden for å style navigasjon elementet på vår side*/
+    color: white;
+    text-transform: uppercase;
+}
+.navigation {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+}
+.nav_link {
+    background-color: #01a95e;
+    padding: 10px 20px;
+    color: white;
+}
+ul.expandable>li a{
+    text-decoration: none;
+}
+.nav_link:hover {
+    background-color: #08a950;
+    color: var(--color-yellow-Dark);
+}
+.navigation ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+.navigation ul>li {
+    margin: 1.8em;
+    position: relative;
+    top: 10px;
+}
+
+.contact{
+    color: white;
+    text-decoration: none;
+}
+.navigation nav a {
+    text-decoration: none;
+}
+.navigation nav a:hover,.navigation nav a:focus {
+    color: yellow;
+}
+.hamburger_container{                                            /*vi har skjult en hamburger / navigasjon åpner/lukker i pc style delen av nettsiden*/
+    visibility: hidden;
+    opacity: 0;
+  }
+#menu-toggle{
+display: none;
+}
+/*end of styles for pc*/
+/*styles for mobile responsivness in the website*/
+@media screen and (min-width: 641px) and (max-width:1024px){
+    .header{
+        width: 160%;
+    }
+    .footer{
+        width: 160%;
+    }
+    .registration{
+        position: relative;
+        left: 140%;
+    }
+    .phone_gallery{                                      /*tilpasse grid for telefon ved å gjøre elementene over hverandre på mobil enheter*/
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+margin: 10px;
+
+}
+}
+@media screen and  (max-width: 641px) {                        /*her har vi stylet nettsiden for mobil bruk*/
+    /*components*/
+    /*faded image_component*/
+    .faded_image_container {
+        position: relative;
+        width: 50%;
+    }
+    /*table*/
+   table{
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 360px;
+    border-radius: 5px 5px 0 0;
+    margin: 0px;
+}
+   .heading-title {
+    top: 65px;
+    font-size: 4em;
+  }
+  
+  .navigation{
+    flex-direction: column;
+    align-items: center;
+  }
+  .navigation ul{
+    flex-direction: column;
+  }
+  .navigation ul>li{
+    top: 0px;
+  }
+  .header{
+    height: 120vh;
+  }
+ .hamburger_container{                                       /*her er hamburger/ meny åpner/lukker som vises i mobil versjon av navigasjon elementet*/
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    color: var(--color-green-Dark);
+    display: block;
+    border: 2px solid;
+    background: var(--color-yellow-Dark);
+    text-align: center;
+    left: 140px;
+    bottom: 40px;
+  }
+.hamburger_container::after {                               /*her har vi brukt content '\2630' som er det samme som 3 streker over hverandre(hamburger ikon) som vises når navigajson er luket på telefonen*/
+    display: block;
+    content: '\2630';
+    font-size: 1.2em;
+    position: relative;
+    bottom: 1px;
+}
+#menu-toggle:checked + .hamburger_container::after{         /*her endrer vi ikonet til en x når navigasjon elementet er åpnet*/
+     content: 'X';
+}           
+ul.expandable{                                              /*css kode for å skjule ul når navigajson er lukket*/
+    visibility: hidden;
+    display: none;
+}
+#menu-toggle:checked ~  ul.expandable {                     /*vi har brukt en input element med type checkbox og ser om den er checked(aktiv eller trykket på) og viser ul vis den er aktiv/trykket på*/
+    visibility: visible;
+    display: flex;
+}
+.grid_container_small{                                      /*tilpasse grid for telefon ved å gjøre elementene over hverandre på mobil enheter*/
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+margin: 10px;
+
+}
+.phone_gallery{                                      /*tilpasse grid for telefon ved å gjøre elementene over hverandre på mobil enheter*/
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+margin: 10px;
+
+}
+.social_media-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid_container_small>article{
+    margin: 20px 0 13px 0;
+}
+.meny_grid {grid-template-columns: repeat(1,1fr);}
+.smallSection{                                          /*tilpasse seksjoner for bruk i mobil versjon av nettsiden*/
+    display: inline-table;
+  }
+.Home_about_section{
+    height: 60vh;
+}
+.table_section{
+    height: 60vh !important;
+    }                
+}
+
+
+}
+
+/*end of phone general styles for website */
+/*End of Website General Style layout*/
